@@ -1,0 +1,187 @@
+/*includes padding/border in element's width/height*/
+* {
+    box-sizing: border-box;
+}
+
+/*removes default margin*/
+body {
+    margin: 0;
+    background-image: url('images/0.2opacity_bg.png');
+}
+
+/*header*/
+header {
+    font-family: "Fira Sans", sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 4.6rem;
+    padding: 2rem;
+    background-color: #f5eedc;
+    margin: 1rem;
+    border: solid 1px #000;
+}
+
+@media screen and (max-width: 554px) {
+    header {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 555px) and (max-width: 800px) {
+    header {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+    header {
+        font-size: 4rem;
+    }
+}
+
+/*bucket list*/
+main {
+    display: flex;
+    justify-content:center;
+    /*background-color: green;*/
+}
+
+.bucket-list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    /*background-color: blue;*/
+    width: 94vw;
+}
+
+.bucket-item {
+    margin-bottom: 1rem;
+}
+
+.item-image {
+    width: 24vw;
+    height: 34vh;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    background-color: red;
+}
+
+.item-name {
+    font-family: "Fira Sans", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 1.6rem;
+    display: inline;
+    padding: 0.6rem;
+    border: solid 1px #000;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 0.6rem 2rem 1rem;
+    background-color: #fff;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    border: solid 1px #000;
+    border-top: 0;
+}
+
+.stats div {
+    color: #000;
+    /*padding-left: 1rem;*/
+    /*padding-right: 1rem;*/
+    text-align: center;
+}
+
+.stats .stats-data {
+    padding-top: 0.4rem;
+    font-weight: normal;
+    color: #034C53;
+    text-align: center;
+}
+
+i {
+    color: gold;
+}
+
+/*i {*/
+/*    text-align: center;*/
+/*}*/
+
+@media screen and (max-width: 554px) {
+    .bucket-list {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .item-image {
+        width: 80vw;
+        margin-top: 1.6rem;
+    }
+
+    .item-name {
+        font-size: 1.2rem;
+        padding: 0.4rem;
+    }
+
+    .stats {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 555px) and (max-width: 800px) {
+    .bucket-list {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .bucket-item {
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    .item-image {
+        width: 66vw;
+        height: 40vh;
+        margin: 0;
+    }
+
+     .item-name {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+
+     .stats {
+         flex-direction: column;
+         align-items: center;
+         margin: 0;
+         padding: 0.6rem 2rem 2.8rem;
+         border-top: solid 1px #000;
+         border-left: 0;
+     }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+
+    .item-image {
+        width: 40vw;
+        height: 36vh;
+        margin: 0 1.7rem 0 1.7rem;
+    }
+
+    .item-name {
+        font-size: 1.5rem;
+    }
+
+    .stats {
+        margin: 0 1.7rem 2rem;
+    }
+}
