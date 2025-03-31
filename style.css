@@ -93,8 +93,6 @@ main {
 
 .stats div {
     color: #000;
-    /*padding-left: 1rem;*/
-    /*padding-right: 1rem;*/
     text-align: center;
 }
 
@@ -108,10 +106,6 @@ main {
 i {
     color: gold;
 }
-
-/*i {*/
-/*    text-align: center;*/
-/*}*/
 
 @media screen and (max-width: 554px) {
     .bucket-list {
