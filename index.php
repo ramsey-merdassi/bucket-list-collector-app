@@ -26,7 +26,7 @@ $results = $query->fetchAll();
 <body>
     <header>My Bucket List</header>
     <main>
-        <section class="bucket-list">
+        <section class='bucket-list'>
             <?php foreach($results as $result) : ?>
                     <div class='bucket-item'>
                         <div class='item-image' style='background-size: cover; background-position: center; background-image: url(<?= $result['image'] ?>);'>
@@ -50,10 +50,32 @@ $results = $query->fetchAll();
                     </div>
                 <?php endforeach; ?>
         </section>
-        <section class="form">
-
-        </section>
     </main>
+    <section class='add-activity'>
+        <div class='form'>
+            <h1>New activity</h1>
+            <form action='add_activity.php' method='post'>
+                <label for='activity'>Activity</label>
+                <input id='activity' type='text' name='activity'>
+                <label for='year'>Year</label>
+                <input id='year' type='number' name='year'>
+                <label for='location'>Location</label>
+                <input id='location' type='text' name='location'>
+                <label for='location'>Image (url)</label>
+                <input id='location' type='url' name='location'>
+                <label for='rating'>Rate my experience</label>
+                <select id='rating' name='rating'>
+                    <option disabled selected value></option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+                <button>Add</button>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
