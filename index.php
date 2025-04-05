@@ -3,7 +3,7 @@
 require_once 'db.php';
 
 global $db;
-$query = $db->prepare('SELECT `name`, `year`, `location`, `rating`, `image` FROM `bucket_items`');
+$query = $db->prepare('SELECT `activity`, `year`, `location`, `rating`, `image` FROM `bucket_items`');
 $query->execute();
 
 $results = $query->fetchAll();
@@ -30,7 +30,7 @@ $results = $query->fetchAll();
             <?php foreach($results as $result) : ?>
                     <div class='bucket-item'>
                         <div class='item-image' style='background-size: cover; background-position: center; background-image: url(<?= $result['image'] ?>);'>
-                            <div class='item-name'><?= $result['name'] ?></div>
+                            <div class='item-name'><?= $result['activity'] ?></div>
                         </div>
                         <div class='stats'>
                             <div>Year<div class='stats-data'><?= $result['year'] ?></div></div>
@@ -61,8 +61,8 @@ $results = $query->fetchAll();
                 <input id='year' type='number' name='year'>
                 <label for='location'>Location</label>
                 <input id='location' type='text' name='location'>
-                <label for='location'>Image (url)</label>
-                <input id='location' type='url' name='location'>
+                <label for='image'>Image (url)</label>
+                <input id='image' type='url' name='image'>
                 <label for='rating'>Rate my experience</label>
                 <select id='rating' name='rating'>
                     <option disabled selected value></option>
