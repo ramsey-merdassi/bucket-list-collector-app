@@ -206,10 +206,11 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
 }
 
 .add-activity h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 1.4rem 0 1rem;
 }
 
@@ -238,14 +239,19 @@ select {
     font-size: 0.9rem;
 }
 
- button {
-    margin-top: 0.2rem;
-    margin-left: 9.6rem;
-    padding: 0.4rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #000;
- }
+.submit-activity {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-activity input {
+    margin-top: 0.6rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    width: 18%;
+    cursor: pointer;
+}
 
  @media screen and (max-width: 554px) {
 
@@ -255,25 +261,23 @@ select {
 
      .form {
          width: 79%;
-         height: 82%;
+         height: 78%;
      }
 
       .add-activity h1 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
      form {
          align-items: center;
          width: 70%;
+         font-size: 0.9rem;
      }
 
-     input {
-             padding: 0.3rem 5rem 0.1rem 0.1rem;
-     }
-
-     button {
-         margin-left: 0;
-         margin-top: 1rem;
+     .submit-activity input {
+        margin-top: 1rem;
+        width: 22%;
+        font-size: 0.9rem;
      }
  }
 
@@ -284,16 +288,21 @@ select {
 
     .form {
         width: 70%;
-        height: 80%;
+        height: 82%;
     }
 
      .add-activity h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     form {
         width: 60%;
     }
+
+    .submit-activity input {
+        margin-top: 1rem;
+        width: 26%;
+     }
 }
 
 @media screen and (min-width: 911px) and (max-width: 1400px) {
@@ -303,10 +312,6 @@ select {
 
     .form {
         height: 80%;
-    }
-
-     .add-activity h1 {
-        font-size: 1.7rem;
     }
 
     form {

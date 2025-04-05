@@ -72,7 +72,9 @@ $results = $query->fetchAll();
                     <option value='4'>4</option>
                     <option value='5'>5</option>
                 </select>
-                <button>Add</button>
+                <div class='submit-activity'>
+                    <input type='submit' name='submit' value='Add'>
+                </div>
             </form>
         </div>
     </section>
