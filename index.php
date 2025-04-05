@@ -56,15 +56,15 @@ $results = $query->fetchAll();
             <h1>New activity</h1>
             <form action='add_activity.php' method='post'>
                 <label for='activity'>Activity</label>
-                <input id='activity' type='text' name='activity'>
+                <input required maxlength='26' id='activity' type='text' name='activity'>
                 <label for='year'>Year</label>
-                <input id='year' type='number' name='year'>
+                <input required min='1983' id='year' type='number' name='year'>
                 <label for='location'>Location</label>
-                <input id='location' type='text' name='location'>
+                <input required maxlength='21' id='location' type='text' name='location'>
                 <label for='image'>Image (url)</label>
-                <input id='image' type='url' name='image'>
+                <input required id='image' type='url' name='image'>
                 <label for='rating'>Rate my experience</label>
-                <select id='rating' name='rating'>
+                <select required id='rating' name='rating'>
                     <option disabled selected value></option>
                     <option value='1'>1</option>
                     <option value='2'>2</option>

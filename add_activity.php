@@ -5,10 +5,10 @@ global $db;
 
 if (isset($_POST['submit'])) {
 
-$activity = $_POST['activity'];
-$year = $_POST['year'];
-$location = $_POST['location'];
-$image = $_POST['image'];
+$activity = trim($_POST['activity']);
+$year = trim($_POST['year']);
+$location = trim($_POST['location']);
+$image = trim($_POST['image']);
 $rating = $_POST['rating'];
 
 $add_data = $db->prepare('INSERT INTO `bucket_items`(`activity`, `year`, `location`, `image`, `rating`) 
