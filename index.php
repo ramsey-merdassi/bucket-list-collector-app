@@ -24,7 +24,23 @@ $results = $query->fetchAll();
 </head>
 
 <body>
-    <header>My Bucket List</header>
+    <header>
+        <h1>My Bucket List</h1>
+        <form class='change-display' action='change_display.php' method='post'>
+            <label for='sort'>Sort</label>
+            <select id='sort' name='sort'>
+                <option disabled selected></option>
+                <option value='activity(a-z)'>activity(a-z)</option>
+                <option value='activity(z-a)'>activity(z-a)</option>
+                <option value='year(latest)'>year(latest)</option>
+                <option value='year(oldest)'>year(oldest)</option>
+                <option value='location(a-z)'>location(a-z)</option>
+                <option value='location(z-a)'>location(z-a)</option>
+                <option value='rating(highest)'>rating(highest)</option>
+                <option value='rating(lowest)'>rating(lowest)</option>
+            </select>
+        </form>
+    </header>
     <main>
         <section class='bucket-list'>
             <?php foreach($results as $result) : ?>
@@ -60,12 +76,12 @@ $results = $query->fetchAll();
                 <label for='year'>Year</label>
                 <input required min='1983' id='year' type='number' name='year'>
                 <label for='location'>Location</label>
-                <input required maxlength='21' id='location' type='text' name='location'>
+                <input required maxlength='12' id='location' type='text' name='location'>
                 <label for='image'>Image (url)</label>
                 <input required id='image' type='url' name='image'>
                 <label for='rating'>Rate my experience</label>
                 <select required id='rating' name='rating'>
-                    <option disabled selected value></option>
+                    <option disabled selected></option>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
                     <option value='3'>3</option>
