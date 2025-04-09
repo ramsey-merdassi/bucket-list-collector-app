@@ -30,14 +30,14 @@ $results = $query->fetchAll();
             <label for='sort'>Sort</label>
             <select id='sort' name='sort'>
                 <option disabled selected></option>
-                <option value='activity(a-z)'>activity(a-z)</option>
-                <option value='activity(z-a)'>activity(z-a)</option>
-                <option value='year(latest)'>year(latest)</option>
-                <option value='year(oldest)'>year(oldest)</option>
-                <option value='location(a-z)'>location(a-z)</option>
-                <option value='location(z-a)'>location(z-a)</option>
-                <option value='rating(highest)'>rating(highest)</option>
-                <option value='rating(lowest)'>rating(lowest)</option>
+                <option value='activity(a-z)'>Activity (A-Z)</option>
+                <option value='activity(z-a)'>Activity (Z-A)</option>
+                <option value='year(latest)'>Year (Latest)</option>
+                <option value='year(oldest)'>Year (Oldest)</option>
+                <option value='location(a-z)'>Location (A-Z)</option>
+                <option value='location(z-a)'>Location (Z-A)</option>
+                <option value='rating(highest)'>Rating (Highest)</option>
+                <option value='rating(lowest)'>Rating (Lowest)</option>
             </select>
         </form>
     </header>
