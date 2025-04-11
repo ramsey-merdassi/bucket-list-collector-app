@@ -30,11 +30,26 @@ header h1 {
 
 .change-display {
     display: inline;
-    width: 12.4%;
+    width: 22%;
     margin-bottom: 2rem;
     font-size: 1.1rem;
     text-align: center;
     /*background-color: yellow;*/
+}
+
+.change-display select {
+    padding: 0.3rem 0.4rem 0.4rem;
+}
+
+.change-display input {
+    width: 20%;
+    padding-bottom: 0.4rem;
+    padding-top: 0.3rem;
+    background-color: #0279ff;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 554px) {
@@ -44,7 +59,7 @@ header h1 {
 
     .change-display {
         font-size: 1rem;
-        width: 50.9%;
+        width: 70%;
     }
 }
 
@@ -55,7 +70,7 @@ header h1 {
 
     .change-display {
         font-size: 1rem;
-        width: 33.4%;
+        width: 40%;
     }
 }
 
@@ -69,7 +84,7 @@ header h1 {
     }
 
     .change-display {
-        width: 20.2%;
+        width: 30%;
     }
 }
 
@@ -283,6 +298,10 @@ select {
     padding-bottom: 0.4rem;
     width: 18%;
     cursor: pointer;
+    background-color: #0279ff;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
 }
 
  @media screen and (max-width: 554px) {
