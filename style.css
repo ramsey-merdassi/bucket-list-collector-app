@@ -306,7 +306,7 @@ select {
 
  @media screen and (max-width: 554px) {
      .add-activity {
-         height: 88vh;
+         height: 86vh;
      }
 
      .form {
