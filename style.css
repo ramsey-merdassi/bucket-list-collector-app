@@ -45,11 +45,15 @@ header h1 {
     width: 20%;
     padding-bottom: 0.4rem;
     padding-top: 0.3rem;
-    background-color: #0279ff;
+    background-color: #757575;
     color: #fff;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.change-display input:hover {
+    background-color: #3BB143;
 }
 
 @media screen and (max-width: 554px) {
@@ -236,15 +240,15 @@ i {
 
 /*form*/
 .add-activity {
-    height: 70vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     /*background-color: yellow;*/
 }
 
-.form {
-    height: 70%;
+.new-activity-form {
+    height: 81%;
     width: 60%;
     background-color: #f5eedc;
     color: #000;
@@ -261,11 +265,11 @@ i {
     margin: 1.4rem 0 1rem;
 }
 
-form {
+.new-activity-form form {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 41%;
+    width: 60%;
     /*background-color: cyan;*/
 }
 
@@ -279,6 +283,19 @@ input {
     font-size: 1rem;
     width: 100%;
     padding-top: 0.4rem;
+}
+
+.activity-type {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.4rem;
+    /*background-color: orange;*/
+}
+
+.activity-type input {
+    width: 1.5rem;
 }
 
 select {
@@ -298,10 +315,14 @@ select {
     padding-bottom: 0.4rem;
     width: 18%;
     cursor: pointer;
-    background-color: #0279ff;
+    background-color: #757575;
     color: #fff;
     border: 0;
     border-radius: 5px;
+}
+
+.submit-activity input:hover {
+    background-color: #3BB143;
 }
 
  @media screen and (max-width: 554px) {
@@ -309,19 +330,22 @@ select {
          height: 86.5vh;
      }
 
-     .form {
-         width: 79%;
-         height: 78%;
+     .new-activity-form {
+         width: 78%;
      }
 
       .add-activity h1 {
         font-size: 1.3rem;
     }
 
-     form {
+     .new-activity-form form {
          align-items: center;
          width: 70%;
          font-size: 0.9rem;
+     }
+
+     .activity-type {
+         flex-wrap: wrap;
      }
 
      .submit-activity input {
