@@ -347,6 +347,7 @@ select {
 
      .activity-type {
          flex-wrap: wrap;
+         width: 200px;
      }
 
      .activity-type input {
@@ -360,21 +361,28 @@ select {
      }
  }
 
+@media screen and (min-width: 555px) and (max-width: 754px) {
+    .activity-type {
+        flex-wrap: wrap;
+        width: 220px;
+    }
+}
+
 @media screen and (min-width: 555px) and (max-width: 910px) {
     .add-activity {
-        height: 60vh;
+        height: 75vh;
     }
 
-    .form {
+    .new-activity-form {
         width: 70%;
-        height: 82%;
+        height: 85%;
     }
 
      .add-activity h1 {
         font-size: 1.5rem;
     }
 
-    form {
+     .new-activity-form form {
         width: 60%;
     }
 
@@ -382,20 +390,4 @@ select {
         margin-top: 1rem;
         width: 26%;
      }
-}
-
-@media screen and (min-width: 911px) and (max-width: 1400px) {
-    .add-activity {
-        height: 50vh;
-        margin-top: 1rem;
-        margin-bottom: 4rem;
-     }
-
-    .form {
-        height: 100%;
-    }
-
-    form {
-        width: 60%;
-    }
 }
