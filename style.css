@@ -327,12 +327,12 @@ select {
 
  @media screen and (max-width: 554px) {
      .add-activity {
-         height: 86.5vh;
+         height: 100vh;
      }
 
      .new-activity-form {
          width: 78%;
-         height: 90%;
+         height: 86%;
      }
 
       .add-activity h1 {
@@ -347,6 +347,10 @@ select {
 
      .activity-type {
          flex-wrap: wrap;
+     }
+
+     .activity-type input {
+		 margin-left: 0.6rem;
      }
 
      .submit-activity input {
