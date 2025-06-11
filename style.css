@@ -29,27 +29,60 @@ header h1 {
 }
 
 .change-display {
-    display: inline;
-    width: 22%;
+    display: flex;
+    width: 60%;
     margin-bottom: 2rem;
     font-size: 1.1rem;
-    text-align: center;
     /*background-color: yellow;*/
 }
 
 .change-display select {
-    padding: 0.3rem 0.4rem 0.4rem;
+    height: 2rem;
 }
 
-.change-display input {
-    width: 20%;
+.filter-label {
+    margin-left: 1rem;
+}
+
+.type-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 17%;
+    margin-left: 1rem;
+    /*background-color: orange;*/
+}
+
+.type-filter label {
+    margin-bottom: 0.6rem;
+}
+
+.filters {
+    display: flex;
+    /*background-color: cyan;*/
+}
+
+.filters input {
+    margin-right: 0.4rem;
+    width: 1rem;
+
+}
+
+.filters label {
+    margin: 0;
+}
+
+.filter-btn {
+    width: 4rem;
     padding-bottom: 0.4rem;
     padding-top: 0.3rem;
+    margin-left: 1rem;
     background-color: #757575;
     color: #fff;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    height: 2rem;
 }
 
 .change-display input:hover {
@@ -59,11 +92,42 @@ header h1 {
 @media screen and (max-width: 554px) {
     header h1 {
         font-size: 2.6rem;
+        margin-bottom: 0.6rem;
     }
 
     .change-display {
+        flex-direction: column;
+        align-items: center;
         font-size: 1rem;
-        width: 70%;
+        width: 100%;
+    }
+
+    .change-display select {
+        width: 7rem;
+    }
+
+    .filter-label {
+        margin-left: 0;
+        margin-top: 0.6rem;
+    }
+
+    .type-filter {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 0.6rem;
+    }
+
+    .filter-fields {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filters input {
+        margin-left: 0.6rem;
+    }
+
+    .filter-btn {
+        margin-top: 1rem;
     }
 }
 
@@ -73,8 +137,39 @@ header h1 {
     }
 
     .change-display {
+        flex-direction: column;
+        align-items: center;
         font-size: 1rem;
-        width: 40%;
+        width: 80%;
+    }
+
+    .change-display select {
+        width: 7rem;
+    }
+
+    .filter-label {
+        margin-left: 0;
+        margin-top: 0.6rem;
+    }
+
+    .type-filter {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 0.6rem;
+    }
+
+    .filter-fields {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filters input {
+        margin-left: 0.6rem;
+    }
+
+    .filter-btn {
+        margin-top: 1rem;
     }
 }
 
@@ -85,10 +180,43 @@ header h1 {
 
     header h1 {
         font-size: 3.4rem;
+        margin-bottom: 1rem;
     }
 
     .change-display {
-        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .change-display select {
+        width: 7rem;
+    }
+
+    .filter-label {
+        margin-left: 0;
+        margin-top: 0.6rem;
+    }
+
+    .type-filter {
+        width: 50%;
+        margin-left: 0;
+        margin-top: 0.6rem;
+    }
+
+    .filter-fields {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filters input {
+        margin-left: 0.6rem;
+    }
+
+    .filter-btn {
+        margin-top: 1rem;
     }
 }
 
