@@ -48,7 +48,7 @@ $results = $query->fetchAll();
     <header>
         <h1>My Bucket List</h1>
         <form class='change-display' action='' method='get'>
-<!--            <label for='sort'>Sort</label>-->
+            <label for='sort'>Sort</label>
             <select name='sort'>
                 <option disabled selected></option>
                 <option value='activity(asc)'>Activity (a-z)</option>
@@ -60,7 +60,53 @@ $results = $query->fetchAll();
                 <option value='rating(desc)'>Rating (highest)</option>
                 <option value='rating(asc)'>Rating (lowest)</option>
             </select>
-            <input type='submit' value='Sort'>
+            <label class='filter-label' for='filter'>Filter by:</label>
+            <div class="type-filter">
+                <label>Activity Type</label>
+                <div class="filter-fields">
+                    <div class='filters'>
+                        <input type='checkbox' name='travel-activity-filter'>Travel
+                    </div>
+                    <div class='filters'>
+                        <input type='checkbox' name='development-activity-filter'>Development
+                    </div>
+                    <div class='filters'>
+                        <input type='checkbox' name='giving-activity-filter'>Giving
+                    </div>
+                    <div class='filters'>
+                        <input type='checkbox' name='leisure-activity-filter'>Leisure
+                    </div>
+                </div>
+            </div>
+            <div class="type-filter">
+                <label>Continent</label>
+                <div class="filter-fields">
+                    <div class='filters'>
+                        <input type='checkbox' name='asia-filter'>Asia
+                    </div>
+                    <div class='filters'>
+                        <input type='checkbox' name='africa-filter'>Africa
+                    </div>
+                    <div class='filters'>
+                        <input type='checkbox' name='north-america-filter'>
+                        <label>North America</label>
+                    </div>
+                    <div class='filters'>
+                        <input type='checkbox' name='south-america-filter'>
+                        <label>South America</label>
+                    </div>
+                     <div class='filters'>
+                        <input type='checkbox' name='antarctica-filter'>Antarctica
+                    </div>
+                     <div class='filters'>
+                        <input type='checkbox' name='europe-filter'>Europe
+                    </div>
+                     <div class='filters'>
+                        <input type='checkbox' name='oceania-filter'>Oceania
+                    </div>
+                </div>
+            </div>
+            <input class='filter-btn' type='submit' value='Go'>
         </form>
     </header>
     <main>
