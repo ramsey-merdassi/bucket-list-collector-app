@@ -65,7 +65,6 @@ header h1 {
 .filters input {
     margin-right: 0.4rem;
     width: 1rem;
-
 }
 
 .filters label {
@@ -112,7 +111,7 @@ header h1 {
     }
 
     .type-filter {
-        width: 80%;
+        width: 17rem;
         margin-left: 0;
         margin-top: 0.6rem;
     }
@@ -153,7 +152,7 @@ header h1 {
     }
 
     .type-filter {
-        width: 80%;
+        width: 25.6rem;
         margin-left: 0;
         margin-top: 0.6rem;
     }
@@ -187,7 +186,7 @@ header h1 {
         flex-direction: column;
         align-items: center;
         font-size: 1rem;
-        width: 100%;
+        width: 85%;
     }
 
     .change-display select {
@@ -200,7 +199,7 @@ header h1 {
     }
 
     .type-filter {
-        width: 50%;
+        width: 25.6rem;
         margin-left: 0;
         margin-top: 0.6rem;
     }
