@@ -30,6 +30,7 @@ header h1 {
 
 .change-display {
     display: flex;
+    justify-content: center;
     width: 60%;
     margin-bottom: 2rem;
     font-size: 1.1rem;
