@@ -1,34 +1,7 @@
 <?php
 
-require_once 'db.php';
-
-global $db;
-$query = '';
-
-if (isset($_GET['sort'])) {
-    if($_GET['sort'] === 'activity(asc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `activity_name`');
-    } elseif ($_GET['sort'] === 'activity(desc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `activity_name` DESC');
-    } elseif ($_GET['sort'] === 'year(desc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `year` DESC');
-    } elseif ($_GET['sort'] == 'year(asc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `year`');
-    } elseif ($_GET['sort'] == 'location(asc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `location`');
-    } elseif ($_GET['sort'] == 'location(desc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `location` DESC');
-    } elseif ($_GET['sort'] == 'rating(desc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `rating` DESC');
-    } elseif ($_GET['sort'] == 'rating(asc)') {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items` ORDER BY `rating`');
-    }
-} else {
-        $query = $db->prepare('SELECT `activity_name`, `year`, `location`, `rating`, `image` FROM `bucket_items`');
-}
-
-$query->execute();
-$results = $query->fetchAll();
+require_once 'display_items.php';
+global $results;
 
 ?>
 <!DOCTYPE html>
@@ -49,7 +22,7 @@ $results = $query->fetchAll();
         <h1>My Bucket List</h1>
         <form class='change-display' action='' method='get'>
             <label for='sort'>Sort</label>
-            <select name='sort'>
+            <select id='sort' name='sort'>
                 <option disabled selected></option>
                 <option value='activity(asc)'>Activity (a-z)</option>
                 <option value='activity(desc)'>Activity (z-a)</option>
@@ -65,16 +38,16 @@ $results = $query->fetchAll();
                 <label>Activity Type</label>
                 <div class="filter-fields">
                     <div class='filters'>
-                        <input type='checkbox' name='travel-activity-filter'>Travel
+                        <input type='checkbox' name='travel-filter'>Travel
                     </div>
                     <div class='filters'>
-                        <input type='checkbox' name='development-activity-filter'>Development
+                        <input type='checkbox' name='development-filter'>Development
                     </div>
                     <div class='filters'>
-                        <input type='checkbox' name='giving-activity-filter'>Giving
+                        <input type='checkbox' name='giving-filter'>Giving
                     </div>
                     <div class='filters'>
-                        <input type='checkbox' name='leisure-activity-filter'>Leisure
+                        <input type='checkbox' name='leisure-filter'>Leisure
                     </div>
                 </div>
             </div>
@@ -106,7 +79,7 @@ $results = $query->fetchAll();
                     </div>
                 </div>
             </div>
-            <input class='filter-btn' type='submit' value='Go'>
+            <input class='filter-btn' type='submit' name='go' value='Go'>
         </form>
     </header>
     <main>
@@ -134,6 +107,9 @@ $results = $query->fetchAll();
                     </div>
                 <?php endforeach; ?>
         </section>
+        <?php if(empty($results)) : ?>
+            <h2 class='empty-message'>No activities match your search</h2>
+        <?php endif; ?>
     </main>
     <section class='add-activity'>
         <div class='new-activity-form'>
@@ -155,13 +131,13 @@ $results = $query->fetchAll();
                 <label for='continent'>Continent</label>
                 <select required id='continent' name='continent'>
                     <option disabled selected></option>
-                    <option value='Asia'>Asia</option>
                     <option value='Africa'>Africa</option>
-                    <option value='North America'>North America</option>
-                    <option value='South America'>South America</option>
                     <option value='Antarctica'>Antarctica</option>
+                    <option value='Asia'>Asia</option>
                     <option value='Europe'>Europe</option>
+                    <option value='North America'>North America</option>
                     <option value='Oceania'>Oceania</option>
+                    <option value='South America'>South America</option>
                 </select>
                 <label for='image'>Image (url)</label>
                 <input required id='image' type='url' name='image'>
