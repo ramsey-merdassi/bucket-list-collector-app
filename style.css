@@ -308,6 +308,10 @@ i {
         font-size: 0.9rem;
         padding-bottom: 1rem;
     }
+
+    .empty-message {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 555px) and (max-width: 910px) {
